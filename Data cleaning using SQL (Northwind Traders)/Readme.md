@@ -58,12 +58,23 @@ I used a case statement to assign freight values between 0 and 50 as "Low Char
 ```sql
 SELECT freight,
      CASE WHEN freight < 50 THEN 'low charge'
-	 END as charge
-FROM the_dataminant_orders
+     END as charge
+FROM the_dataminant_orders ;
  ```
 ![](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/f947440d85dd29409c766ab0015813f5bbfc006a/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Case%20statement%20to%20label%20freight%20values.jpg)
 
+For freight values over 200 and between 50 and 200, I added new conditions. There is now a label for every freight in a new column called "Charge."
 
+```sql
+SELECT freight,
+     CASE WHEN freight < 50 THEN 'low charge'
+          WHEN freight between 50 and 200 THEN 'meduim charge'
+	  WHEN freight > 200 THEN 'high charge'
+END AS charge
+FROM the_dataminant_orders
+```
+
+![higher freight](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/dab5f1c2bf51d0a1f50e2cbb5dbcc3ecb172d86c/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Case%20statement%20for%20higher%20freight%20values.jpg)
 
 
 
