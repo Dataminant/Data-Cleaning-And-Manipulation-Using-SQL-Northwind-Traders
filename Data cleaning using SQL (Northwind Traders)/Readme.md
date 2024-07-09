@@ -53,3 +53,18 @@ FROM the_dataminant_orders ;
 
 ![max min freight](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/6569afc3d8e7e0325a0cfe667097dd243a81a96d/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Selected%20the%20minimum%20and%20maximum%20values%20for%20the%20freight%20variable%20in%20the%20Orders%20table.jpg)
 
+I used a case statement to assign freight values between 0 and 50 as "Low Charge" while trying to make freight charges for each order. To give the new column created a name, I used the alias "Charge."
+
+```sql
+SELECT freight,
+     CASE WHEN freight < 50 THEN 'low charge'
+	 END as charge
+FROM the_dataminant_orders
+ ```
+![](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/f947440d85dd29409c766ab0015813f5bbfc006a/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Case%20statement%20to%20label%20freight%20values.jpg)
+
+
+
+
+
+
