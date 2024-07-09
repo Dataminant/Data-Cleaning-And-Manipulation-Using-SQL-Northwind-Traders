@@ -2,4 +2,4 @@
 
 ## Processes:
 
-## Detecting and Removing Duplicated
+### Detecting and Removing Duplicated
