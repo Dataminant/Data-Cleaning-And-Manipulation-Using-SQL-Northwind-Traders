@@ -1,4 +1,4 @@
-# Data-cleaning-using-SQL-Northwind-Traders
+# Data-Cleaning-Using-SQL-Northwind-Traders
 
 ## Introduction
 
