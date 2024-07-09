@@ -40,6 +40,6 @@ SELECT *
 FROM CTE_rownun
 WHERE rownun = 1 ;
 ```
-![using CTE][](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/08e6f584e0ae48d561a8a15e4147c26a47c625fc/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/CTE%20to%20get%20rid%20of%20the%20duplicates%20for%20each%20customer%20ID.jpg)
+![using CTE](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/08e6f584e0ae48d561a8a15e4147c26a47c625fc/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/CTE%20to%20get%20rid%20of%20the%20duplicates%20for%20each%20customer%20ID.jpg)
 
 
