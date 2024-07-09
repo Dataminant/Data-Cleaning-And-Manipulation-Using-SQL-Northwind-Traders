@@ -1,6 +1,6 @@
 # Data-cleaning-using-SQL-Northwind-Traders
 
-## Introdction
+## Introduction
 
 This project involves a database from “Northwind Traders” an import-export company, it is not only one table but several of them (customers, orders, inventory, invoices, supplies and shipping as well as employees). 
 
@@ -8,11 +8,11 @@ My goal is to clean up and transform the data using SQL functions before moving 
 
 ## Objective
 
-📍 Detecting and removing duplicates
+* Detecting and removing duplicates
 
-📍 Cleaning the data
+* Cleaning the data
 
-📍 Dealing with null data
+* Dealing with null data
 
 
 ## Conclusion
