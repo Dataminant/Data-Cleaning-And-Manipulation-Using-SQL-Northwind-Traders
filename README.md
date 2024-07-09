@@ -13,7 +13,9 @@ My goal is to clean up and transform the data using SQL functions before moving 
 * Cleaning the data
 
 * Dealing with null data
+ &nbsp;
 
+  &nbsp;
 
 ## Conclusion
 
