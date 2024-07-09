@@ -8,11 +8,11 @@ My goal is to clean up and transform the data using SQL functions before moving 
 
 ## Objective
 
-📍 **Detecting and removing duplicates**
+📍 Detecting and removing duplicates
 
-📍 **Cleaning the data**
+📍 Cleaning the data
 
-📍 **Dealing with null data**  
+📍 Dealing with null data
 
 
 ## Conclusion
