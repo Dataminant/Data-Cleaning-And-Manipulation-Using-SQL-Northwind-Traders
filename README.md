@@ -1,4 +1,4 @@
-# Data-Cleaning-Using-SQL-Northwind-Traders
+# Data-Cleaning-And-Manipulation-Using-SQL-Northwind-Traders
 
 ## Introduction
 
@@ -22,6 +22,6 @@ My goal is to clean up and transform the data using SQL functions before moving 
 
 ## Conclusion
 
-In order for companies to fully utilize their data, data cleansing is an essential step in the data preparation process. Data cleaning takes time and effort, but the results are better because it helps in making improved data-driven decisions and more informed business strategies.
+In order for companies to fully utilize their data, data cleansing is an essential step in the data preparation process. Data cleaning and manipulation takes time and effort, but the results are better because it helps in making improved data-driven decisions and more informed business strategies.
 
-By identifying and fixing several data abnormalities or inconsistencies, such as duplicate values or missing entries, this project shows the need of data cleaning. An efficient method for improving data accuracy and consistency was used in the SQL queries  to manipulate the databases to clean the data.
+By identifying and fixing several data abnormalities or inconsistencies, such as duplicate values or missing entries, this project shows the need of data cleaning and manipulation. An efficient method for improving data accuracy and consistency was used in the SQL queries  to manipulate the databases to clean the data.
