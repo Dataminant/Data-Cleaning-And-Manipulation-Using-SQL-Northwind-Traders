@@ -7,7 +7,7 @@ This project involves a database from “Northwind Traders” an import-export c
 My goal is to clean up and transform the data using SQL functions before moving on with analysis. My primary work involves handling duplicate data, working on Nulls data and applying conditions to ensure that the data is accurate, consistent and free of errors, as incorrect or inconsistent data can negatively impact the outcome of my analysis. 
 
 
-##CONCLUSION
+## CONCLUSION
 
 In order for companies to fully utilize their data, data cleansing is an essential step in the data preparation process. Data cleaning takes time and effort, but the results are better because it helps in making improved data-driven decisions and more informed business strategies.
 
