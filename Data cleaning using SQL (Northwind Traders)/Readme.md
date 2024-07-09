@@ -109,7 +109,7 @@ SELECT quantityperunit,
 	  WHEN unitsonorder < 5 and unitsinstock >= 50 THEN 'restock in near future'
           ELSE 'ask manager'
       END AS when_to_restock
-FROM the_dataminant_products
+FROM the_dataminant_products ;
 ```
 ![restock full case](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/6c7ede7e5c1c747edf62aea372f7d0425c3cdc59/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/when%20to%20restock%20full%20case%20scenerio.jpg)
 
@@ -119,17 +119,44 @@ From the Customers table, I selected the variables CustomerID, ContactName, Cit
 
 ```sql
 SELECT customerid, contactname, city, region
-FROM the_dataminant_customers
+FROM the_dataminant_customers ;
 ```
 ![dealing with null](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/5c9e5a0ea10d23a2dd489f8c197c7f12067c7ccb/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Dealing%20with%20null.jpg)
 
-I used the COALESCE function to deal with the NULL values. Null values can be replaced with a specified value using the COALESCE function. There are two arguments for it. The first argument or parameter is the expression to be checked for null values. The replacement value is the second argument. I created a new column and set the value of "No Region" to each NULL value in the Regions column while keeping  the values of the other Regions the same
+I used the COALESCE function to deal with the NULL values. Null values can be replaced with a specified value using the COALESCE function. There are two arguments for it. The first argument or parameter is the expression to be checked for null values. The replacement value is the second argument. 
 
 ```sql
-SELECT customerid, contactname, city, region,
+SELECT customerid, contactname, city,
 COALESCE (region, 'no region') AS region
-FROM the_dataminant_customers
+FROM the_dataminant_customers ;
 ```
 
-![region second column](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/1ff1cc4e0e23a0a45bd614b4e8b0e8342fe57a19/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Second%20column%20for%20region%20.jpg)
+![region second column](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/716ff18b3e07622d3467d8892af579f654a9d828/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/COALESCE%20function%20in%20use%20to%20replace%20null%20in%20region.jpg)
+
+From the Customers table, I selected the variables CustomerID, ContactName, City, Region, and Fax. I noticed that there were plenty NULL values in the Fax field in addition to the many NULL values in the Region column.
+
+```sql
+SELECT customerid, contactname, city, region, fax
+FROM the_dataminant_customers ;
+```
+![null in fax](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/716ff18b3e07622d3467d8892af579f654a9d828/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Showing%20dull%20in%20fax%20.jpg)
+
+I also used the COALESCE function to replace NULL values in the Fax column with ‘No Fax’.
+
+To choose just the rows in the Region and Fax column that had "No Region and "No Fax" written in them respectively, I used a common table expression that I named "Blank Region and Fax", for every row in the column Region or Fax with the value "No Region" or "No Fax" is retruned respectively. If the business wishes to determine which customers they need to get fax numbers from, this information might be helpful.
+
+```sql
+WITH blank_region_and_fax AS (
+                           SELECT customerid, contactname, city,
+                           COALESCE (region, 'no region') AS region,
+                           COALESCE (fax, 'no fax') AS fax
+FROM the_dataminant_customers
+)
+
+SELECT *
+FROM blank_region_and_fax
+WHERE region = 'no region' OR
+      fax ='no fax' ;
+```
+![no region no fax](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/56607fa35f76e784e97b99bbe0b0e9bf23ef8ee6/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Showing%20the%20final%20no%20region%20and%20no%20fax.jpg)
 
