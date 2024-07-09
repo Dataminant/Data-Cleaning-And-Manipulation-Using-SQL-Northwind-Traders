@@ -70,7 +70,7 @@ SELECT freight,
      CASE WHEN freight < 50 THEN 'low charge'
           WHEN freight between 50 and 200 THEN 'meduim charge'
 	  WHEN freight > 200 THEN 'high charge'
-END AS charge
+     END AS charge
 FROM the_dataminant_orders
 ```
 
