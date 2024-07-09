@@ -43,7 +43,7 @@ WHERE rownun = 1 ;
 ```
 ![using CTE](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/75c43f95cd29af0b58987d730a1761216a2cc291/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/CTE%20to%20get%20rid%20of%20the%20duplicates%20for%20each%20customer%20ID.jpg)
 
-### Cleaning the data by using Case Statement  
+### Cleaning the data by using Case Statement  Cleaning the data by using Case Statement  
 In order to determine the range and how to go about aggregating the rows that meet specific conditions, I set the minimum and maximum values for the freight variable in the Orders table as Low Charge, Medium Charge and High Charge.
 
 ```sql
@@ -113,6 +113,23 @@ FROM the_dataminant_products
 ```
 ![restock full case](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/6c7ede7e5c1c747edf62aea372f7d0425c3cdc59/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/when%20to%20restock%20full%20case%20scenerio.jpg)
 
+### Dealing with Null Data
 
+From the Customers table, I selected the variables CustomerID, ContactName, City, and Region. This returns a table where the Region column has many NULL values.
 
+```sql
+SELECT customerid, contactname, city, region
+FROM the_dataminant_customers
+```
+![dealing with null](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/5c9e5a0ea10d23a2dd489f8c197c7f12067c7ccb/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Dealing%20with%20null.jpg)
+
+I used the COALESCE function to deal with the NULL values. Null values can be replaced with a specified value using the COALESCE function. There are two arguments for it. The first argument or parameter is the expression to be checked for null values. The replacement value is the second argument. I created a new column and set the value of "No Region" to each NULL value in the Regions column while keeping  the values of the other Regions the same
+
+```sql
+SELECT customerid, contactname, city, region,
+COALESCE (region, 'no region') AS region
+FROM the_dataminant_customers
+```
+
+![region second column](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/1ff1cc4e0e23a0a45bd614b4e8b0e8342fe57a19/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Second%20column%20for%20region%20.jpg)
 
