@@ -1,5 +1,6 @@
 # Data-cleaning-using-SQL-Northwind-Traders
-
+\
+## INTRODUCTION
 
 This project involves a database from “Northwind Traders” an import-export company, it is not only one table but several of them (customers, orders, inventory, invoices, supplies and shipping as well as employees). 
 
