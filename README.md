@@ -1,12 +1,12 @@
 # Data-cleaning-using-SQL-Northwind-Traders
 
-## INTRODUCTION
+## Introdction
 
 This project involves a database from “Northwind Traders” an import-export company, it is not only one table but several of them (customers, orders, inventory, invoices, supplies and shipping as well as employees). 
 
 My goal is to clean up and transform the data using SQL functions before moving on with analysis. My primary work involves handling duplicate data, working on Nulls data and applying conditions to ensure that the data is accurate, consistent and free of errors, as incorrect or inconsistent data can negatively impact the outcome of my analysis.   
 
-## OBJECTIVES
+## Objective
 
 📍 **Detecting and removing duplicates**
 
@@ -15,7 +15,7 @@ My goal is to clean up and transform the data using SQL functions before moving 
 📍 **Dealing with null data**  
 
 
-## CONCLUSION
+## Conclusion
 
 In order for companies to fully utilize their data, data cleansing is an essential step in the data preparation process. Data cleaning takes time and effort, but the results are better because it helps in making improved data-driven decisions and more informed business strategies.
 
