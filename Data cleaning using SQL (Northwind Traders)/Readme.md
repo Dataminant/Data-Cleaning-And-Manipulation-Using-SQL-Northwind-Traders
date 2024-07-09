@@ -1,9 +1,9 @@
 
 # Data cleaning using SQL (Northwind Traders)  
 
-## Processes:
+# Processes:
 
-### Detecting and Removing Duplicated
+## Detecting and Removing Duplicated
 I started by getting all the variables from Orders table so I can look at the summary of the data gathered. I look for duplicates and errors, or patterns that jump out visually. I see duplicated customerID straight away. The Orders table consist of 830 rows. It has 13 columns (CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName,ShipAddress, ShipCity, ShipRegion, ShipPostalCode and ShipCountry).  
   &nbsp;
 
@@ -67,7 +67,7 @@ WHERE rownun = 1 ;
 
   &nbsp;
   
-### Cleaning the data by using Case Statement  Cleaning the data by using Case Statement  
+## Cleaning the data by using Case Statement  Cleaning the data by using Case Statement  
 In order to determine the range and how to go about aggregating the rows that meet specific conditions, I set the minimum and maximum values for the freight variable in the Orders table as Low Charge, Medium Charge and High Charge.
  &nbsp;
 
@@ -173,7 +173,7 @@ FROM the_dataminant_products ;
 
   &nbsp;
   
-### Dealing with Null Data
+## Dealing with Null Data
 
 From the Customers table, I selected the variables CustomerID, ContactName, City, and Region. This returns a table where the Region column has many NULL values.
  &nbsp;
