@@ -43,4 +43,13 @@ WHERE rownun = 1 ;
 ```
 ![using CTE](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/75c43f95cd29af0b58987d730a1761216a2cc291/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/CTE%20to%20get%20rid%20of%20the%20duplicates%20for%20each%20customer%20ID.jpg)
 
+### Cleaning the data by using Case Statement  
+In order to determine the range and how to go about aggregating the rows that meet specific conditions, I set the minimum and maximum values for the freight variable in the Orders table as Low Charge, Medium Charge and High Charge.
+
+```sql
+SELECT MIN(freight), MAX(freight)
+FROM the_dataminant_orders ;
+ ```
+
+![max min freight](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/6569afc3d8e7e0325a0cfe667097dd243a81a96d/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Selected%20the%20minimum%20and%20maximum%20values%20for%20the%20freight%20variable%20in%20the%20Orders%20table.jpg)
 
