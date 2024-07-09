@@ -12,7 +12,7 @@ Next, I choose the CustomerID variables from the Orders table. To find out how m
 ```sql
 SELECT customerid, shipname, shipaddress, shippostalcode, shipcountry,
 ROW_NUMBER () OVER (order by customerid) AS rownun
-FROM the_dataminant_orders
+FROM the_dataminant_orders ;
 ```
 
 ![using row_number](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/399511958396e5d2534d671965183d57a86657f3/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Uisng%20the%20ROW_NUMBER%20function%20to%20detect%20how%20many%20duplicates%20there%20are%20for%20each%20Customer%20ID.jpg)
@@ -25,4 +25,21 @@ ROW_NUMBER () OVER (partition by customerid order by customerid) AS rownun
 FROM the_dataminant_orders ;
 ```
 ![added partion](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/eae96cd5300698dcc3548aa1b1bbcaf0d3b09d76/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Added%20the%20%E2%80%98Partition%20by%E2%80%99%20clause%20to%20partion%20by%20Customer%20ID..jpg)
+
+I used Common Table Expression(CTE) to remove the many duplicates for every customer ID because there are many of them. A common table expression is a temporary result set that you can reference within a subsequent select statement, also it make complex queries easier to understand by breaking them into smaller and more readable queries. 
+
+For each customer ID, I selected the first row, effectively removing all of the duplicates for each customer ID.  
+
+```sql
+WITH CTE_rownun AS (
+SELECT customerid, shipname, shipaddress, shippostalcode, shipcountry,
+ROW_NUMBER () OVER (partition by customerid order by customerid) AS rownun
+FROM the_dataminant_orders
+)
+SELECT *
+FROM CTE_rownun
+WHERE rownun = 1
+```
+!using CTE[](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/08e6f584e0ae48d561a8a15e4147c26a47c625fc/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/CTE%20to%20get%20rid%20of%20the%20duplicates%20for%20each%20customer%20ID.jpg)
+
 
