@@ -13,6 +13,7 @@ I started by getting all the variables from Orders table so I can look at the su
  Next, I choose the CustomerID variables from the Orders table. To find out how many duplicates are there for each Customer ID, I used the ROW_NUMBER function. SQL window function called ROW_NUMBER gives each row in the result set that the query returns a distinct sequential integer. This can be used to provide every row a unique identifier. In essence,  it is grouping by CustomerID and adding a ROW_NUMBER for each row of a set of customer IDs. Each row has a corresponding number. 
 &nbsp;
 
+
 ```sql
 SELECT customerid, shipname, shipaddress, shippostalcode, shipcountry,
 ROW_NUMBER () OVER (order by customerid) AS rownun
