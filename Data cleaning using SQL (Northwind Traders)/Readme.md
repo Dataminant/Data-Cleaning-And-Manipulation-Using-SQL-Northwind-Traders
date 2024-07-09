@@ -71,10 +71,47 @@ SELECT freight,
           WHEN freight between 50 and 200 THEN 'meduim charge'
 	  WHEN freight > 200 THEN 'high charge'
      END AS charge
-FROM the_dataminant_orders
+FROM the_dataminant_orders ;
 ```
 
 ![higher freight](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/dab5f1c2bf51d0a1f50e2cbb5dbcc3ecb172d86c/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Case%20statement%20for%20higher%20freight%20values.jpg)
+
+I added an ELSE statement for any other conditons.
+
+```sql
+SELECT freight,
+     CASE WHEN freight < 50 THEN 'low charge'
+          WHEN freight between 50 and 200 THEN 'meduim charge'
+	  WHEN freight > 200 THEN 'high charge'
+          ELSE 'no charge'
+     END AS charge
+FROM the_dataminant_orders ;
+```
+![addes else](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/6c7ede7e5c1c747edf62aea372f7d0425c3cdc59/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/Case%20statement%20no%20charges%20for%20freight%20values.jpg)
+
+Using a conditional statement to determine when products need to be restocked is another practical application.  I went to the Products table and selected the QuantityPerUnit variable. I created a "Restock Now" condition using a CASE statement for when the UnitsOnOrder  are greater than 50 and UnitsInStock are lesser than 20,  in a new column called "WhenToRestock."
+
+```sql
+SELECT quantityperunit,
+     CASE WHEN unitsonorder > 50 and unitsinstock < 20 THEN 'restock now'
+     END AS when_to_restock
+FROM the_dataminant_products ;
+```
+![restock case exp](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/6c7ede7e5c1c747edf62aea372f7d0425c3cdc59/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/When%20to%20restock%20case%20express%20.jpg)
+
+As you can see, the replacement value is NULL by default because the other options for UnitsOnOrder and UnitsInStock has no conditional expressions. For the restocking next week, next month, and in six months, I added a few more conditions. I also included an ELSE statement asking the manager in the case of other conditons.
+
+```sql
+SELECT quantityperunit,
+     CASE WHEN unitsonorder > 50 and unitsinstock < 20 THEN 'restock now'
+          WHEN unitsonorder  between 30 and 40 and unitsinstock < 20 THEN 'restock next week'
+	  WHEN unitsonorder < 30 and unitsinstock < 50 THEN 'restock next month'
+	  WHEN unitsonorder < 5 and unitsinstock >= 50 THEN 'restock in near future'
+          ELSE 'ask manager'
+      END AS when_to_restock
+FROM the_dataminant_products
+```
+![restock full case](https://github.com/Dataminant/Data-cleaning-using-SQL-Northwind-Traders-/blob/6c7ede7e5c1c747edf62aea372f7d0425c3cdc59/Data%20cleaning%20using%20SQL%20(Northwind%20Traders)/Questions/when%20to%20restock%20full%20case%20scenerio.jpg)
 
 
 
