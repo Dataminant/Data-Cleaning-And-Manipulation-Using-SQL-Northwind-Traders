@@ -67,7 +67,7 @@ WHERE rownun = 1 ;
 
   &nbsp;
   
-## 2. Cleaning the data by using Case Statement  Cleaning the data by using Case Statement  
+## 2. Cleaning the data by using Case Statement
 In order to determine the range and how to go about aggregating the rows that meet specific conditions, I set the minimum and maximum values for the freight variable in the Orders table as Low Charge, Medium Charge and High Charge.
  &nbsp;
 
