@@ -27,13 +27,15 @@ What is the total number of order recorded?
 What is the total quantity sold?
 What is the average revenue
 
-Customer Analysis:
+Customer Analysis:  
+
 What is the total number of customers
 Classify customers based on their sales volumes (Grade A-C)
 Which customer made the most purchase from Northwind Traders?
 
 
-Product Analysis:
+Product Analysis:  
+
 What are the top 10 selling product of Northwind Traders?
 How many products are in the catalog
 What is the sales revenue by product category?
