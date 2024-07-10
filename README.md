@@ -20,6 +20,43 @@ My goal is to clean up and transform the data using SQL functions before moving 
 
   &nbsp;
 
+Sales Analysis:
+
+What is the total sales revenue?
+What is the total number of order recorded?
+What is the total quantity sold?
+What is the average revenue
+
+Customer Analysis:
+What is the total number of customers
+Classify customers based on their sales volumes (Grade A-C)
+Which customer made the most purchase from Northwind Traders?
+
+
+Product Analysis:
+What are the top 10 selling product of Northwind Traders?
+How many products are in the catalog
+What is the sales revenue by product category?
+
+
+Geographical Analysis:
+
+What is the company's sales performances by cities?
+What is the company's sales performances by country?
+
+
+Employee Analysis:
+Who is the best performing sales representative in terms of revenue generating?
+Provide list and full details about all employees and the managers they report to?
+
+
+Shipping Analysis:
+Which shipping company is used the most?
+What is the average days between the order date and the shipping date, also the total number of orders for year 1998.
+ &nbsp;
+
+  &nbsp;
+  
 ## Conclusion
 
 In order for companies to fully utilize their data, data cleansing is an essential step in the data preparation process. Data cleaning and manipulation takes time and effort, but the results are better because it helps in making improved data-driven decisions and more informed business strategies.
