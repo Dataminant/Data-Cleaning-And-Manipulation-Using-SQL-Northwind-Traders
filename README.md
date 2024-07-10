@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project involves a database from “Northwind Traders” an import-export company, it is not only one table but several of them (customers, orders, inventory, invoices, supplies and shipping as well as employees). 
+This project involves a sales & order data for a fictitious gourmet food supplier Northwind Traders. This company sells specialty foods wholesale to retail outlets worldwide. It is not only one table but several of them (customers, orders, inventory, invoices, supplies and shipping as well as employees). 
 
 My goal is to clean up and transform the data using SQL functions before moving on with analysis. My primary work involves handling duplicate data, working on Nulls data and applying conditions to ensure that the data is accurate, consistent and free of errors, as incorrect or inconsistent data can negatively impact the outcome of my analysis.   
  &nbsp;
