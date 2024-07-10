@@ -1,4 +1,4 @@
-# Data-Cleaning-And-Manipulation-Using-SQL-Northwind-Traders
+# Data Cleaning And Manipulation Using SQL Northwind Traders Data
 
 ## Introduction
 
