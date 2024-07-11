@@ -1,5 +1,5 @@
 
-# Data cleaning using SQL (Northwind Traders)  
+# Data Cleaning And Manipulation using SQL (Northwind Traders)  
 
 # Processes:
 
